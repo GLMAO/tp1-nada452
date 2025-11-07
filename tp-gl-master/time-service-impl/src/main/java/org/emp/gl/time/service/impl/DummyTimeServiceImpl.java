@@ -61,7 +61,8 @@ public class DummyTimeServiceImpl
     @Override
     public void addTimeChangeListener(TimerChangeListener pl) {
         // TODO
-        listeners.add(pl) ;
+        listeners.add(pl);
+
     }
 
     @Override

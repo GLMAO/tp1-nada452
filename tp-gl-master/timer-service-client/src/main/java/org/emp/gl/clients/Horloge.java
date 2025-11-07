@@ -8,15 +8,14 @@ import org.emp.gl.timer.service.TimerService ;
 public class Horloge implements TimerChangeListener {
 
     String name; 
-    TimerService timerService ; 
+    TimerService timerService ;
 
 
-    public Horloge (String name) {
-        this.name = name ;
+    public Horloge(String name, TimerService timerService) {
+        this.name = name;
         this.timerService = timerService;
         this.timerService.addTimeChangeListener(this);
-
-        System.out.println ("Horloge "+name+" initialized!") ;
+        System.out.println("Horloge " + name + " initialized!");
     }
 
     public void propertyChange(String prop, Object oldValue, Object newValue) {
