@@ -17,7 +17,7 @@ public class CompteARebours implements TimerChangeListener {
         System.out.println("CompteARebours " + name + " initialisé avec " + compteur + " secondes");
     }
 
-    public void propertyChange(String prop, Object oldValue, Object newValue) {
+    /*public void propertyChange(String prop, Object oldValue, Object newValue) {
         if (TimerChangeListener.SECONDE_PROP.equals(prop)) {
             if (compteur > 0) {
                 compteur--;
@@ -28,6 +28,20 @@ public class CompteARebours implements TimerChangeListener {
                     timerService.removeTimeChangeListener(this);
                 }
             }
-        }}
-}
+        }}*/
+    public void propertyChange(PropertyChangeEvent evt) {
+
+        if (TimerChangeListener.SECONDE_PROP.equals(evt.getPropertyName())) {
+            afficherHeure();
+        }
+    }
+
+
+    public void afficherHeure () {
+        if (timerService != null)
+            System.out.println (name + " affiche " +
+                    timerService.getHeures() +":"+
+                    timerService.getMinutes()+":"+
+                    timerService.getSecondes()) ;
+    }}
 
