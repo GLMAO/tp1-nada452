@@ -5,11 +5,13 @@
  */
 package org.emp.gl.timer.service;
 
+import java.beans.PropertyChangeListener;
+
 /**
  *
  * @author tina
  */
-public interface TimerChangeListener  {
+public interface TimerChangeListener {
     
     final static String DIXEME_DE_SECONDE_PROP = "dixième" ;
     final static String SECONDE_PROP = "seconde" ;
